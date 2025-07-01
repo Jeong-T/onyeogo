@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -34,6 +33,7 @@
       padding: 1rem;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-top: 1rem;
       margin-bottom: 1.5rem;
       text-align: center;
       max-width: 480px;
@@ -84,40 +84,40 @@
       margin-top: 1rem;
       background-color: #2ecc71;
     }
+    .kakao-btn {
+      margin-top: 2.5rem;
+      padding: 0.8rem 1.2rem;
+      font-size: 1rem;
+      color: white;
+      background-color: #f1c40f;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
   </style>
 </head>
 <body>
   <img src="banner.png" alt="방과후 안내" class="banner" />
   <h2>방과후 수강 과목 조회</h2>
 
-  <div id="announcement">
-    <strong>📅 방과후 수업 시작일: 7월 21일</strong><br/><br/>
-    📚 독서: 7/21 - 8/1 (1,2교시, 20차시)<br/>
-    📐 수학2: 7/21 - 8/1 (3,4교시, 20차시)<br/>
-    🔬 물리: 7/21 - 7/25 (1,2교시, 10차시)
-  </div>
-
   <input type="text" id="studentId" placeholder="학번을 입력하세요" />
   <button onclick="search()">조회</button>
 
-  <button onclick="window.open('https://open.kakao.com/o/gJnLECEh', '_blank')"
-          style="
-            margin-top: 1.5rem;
-            padding: 0.8rem 1.2rem;
-            font-size: 1rem;
-            color: white;
-            background-color: #f1c40f;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-          ">
-    💬 수강 문의하기 (정찬영 선생님, 오픈카톡)
-  </button>
+  <div id="announcement">
+    <strong>📅 방과후 수업 시작일: 7월 21일</strong><br/><br/>
+    📚 독서: 7/21 - 8/1 (1,2교시, 20차시)<br/>
+    📐 수학Ⅱ: 7/21 - 8/1 (3,4교시, 20차시)<br/>
+    🔬 물리: 7/21 - 7/25 (1,2교시, 10차시)
+  </div>
 
   <div id="result"></div>
+
+  <button class="kakao-btn" onclick="window.open('https://open.kakao.com/o/gJnLECEh', '_blank')">
+    💬 수강 문의하기 (정찬영 선생님, 오픈카톡)
+  </button>
 
   <script>
     let studentData = {};
